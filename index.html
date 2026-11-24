@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jenny Cai</title>
+<meta name="description" content="Jenny Cai is a researcher in the Clinical Decision Making Group (MEDG) at MIT CSAIL, building models that detect psychiatric diseases from vocal biomarkers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jenny Cai">
+<meta property="og:description" content="Researcher at MIT CSAIL (MEDG), building models that detect psychiatric diseases from vocal biomarkers.">
+<meta property="og:image" content="https://jennyxycai.github.io/assets/img/jenny.jpg">
+<meta property="og:url" content="https://jennyxycai.github.io/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face {
+    font-family: "Newsreader";
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+    src: url("assets/fonts/newsreader-latin-opsz-normal.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Newsreader";
+    font-style: italic;
+    font-weight: 200 800;
+    font-display: swap;
+    src: url("assets/fonts/newsreader-latin-opsz-italic.woff2") format("woff2");
+  }
+
+  :root {
+    --paper: #ffffff;
+    --ink: #1c1f26;      /* blue-black, like fountain-pen ink */
+    --pencil: #5c6170;   /* secondary text: authors, venues, dates */
+    --rule: #e2e4ea;     /* thumbnail edges */
+    --link: #2347c5;     /* ink blue */
+    --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 28px 56px;
+  }
+
+  /* ---------- Intro ---------- */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 216px;
+    column-gap: 44px;
+    align-items: start;
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -0.012em;
+  }
+  .contact {
+    margin: 14px 0 28px;
+    font-size: 17px;
+  }
+  .contact .sep {
+    color: var(--pencil);
+    margin: 0 0.45em;
+  }
+  .bio p { margin: 0 0 1em; }
+  .bio p:last-child { margin-bottom: 0; }
+  .portrait {
+    display: block;
+    width: 216px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+
+  /* ---------- Sections ---------- */
+  h2 {
+    margin: 72px 0 28px;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: 216px minmax(0, 1fr);
+    column-gap: 28px;
+    align-items: start;
+    margin-bottom: 44px;
+  }
+  .project:last-child { margin-bottom: 0; }
+
+  .thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  .project h3,
+  .fun-card h3 {
+    margin: 0 0 4px;
+    font-size: 19px;
+    line-height: 1.35;
+    font-weight: 600;
+  }
+  .meta {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--pencil);
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .venue { font-style: italic; }
+  .meta .sep { margin: 0 0.4em; }
+  .summary {
+    margin: 10px 0 0;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  /* ---------- fun! ---------- */
+  .fun-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 28px;
+  }
+  .fun-media {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    margin-bottom: 14px;
+    background: #f3f4f7;
+  }
+  .media-link { display: block; }
+  .ai {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.16em;
+  }
+
+  footer {
+    margin-top: 80px;
+    font-size: 15px;
+    color: var(--pencil);
+  }
+
+  /* ---------- Small screens ---------- */
+  @media (max-width: 680px) {
+    .page { padding: 40px 20px 48px; }
+    .hero { grid-template-columns: minmax(0, 1fr); }
+    .portrait {
+      order: -1;
+      width: 136px;
+      margin: 0 0 18px;
+    }
+    .hero h1 { font-size: 40px; }
+    h2 { margin-top: 56px; }
+    .project {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 14px;
+    }
+    .project .thumb { max-width: 420px; }
+    .fun-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="hero">
+    <div>
+      <h1>Jenny Cai</h1>
+      <p class="contact">
+        <a id="email" href="#" data-user="jennyxycai" data-domain="gmail.com">Email</a><span class="sep" aria-hidden="true">|</span><a href="assets/Jenny_Cai_Resume.pdf">Resume</a><span class="sep" aria-hidden="true">|</span><a href="https://scholar.google.com/citations?user=BnEOkf8AAAAJ&amp;hl=en">Scholar</a><span class="sep" aria-hidden="true">|</span><a href="https://github.com/jennyxycai">GitHub</a><span class="sep" aria-hidden="true">|</span><a href="https://www.linkedin.com/in/jennyxycai">LinkedIn</a>
+        <noscript><br>jennyxycai [at] gmail [dot] com</noscript>
+      </p>
+      <div class="bio">
+        <p>Hi! I’m currently a researcher in the <a href="https://www.csail.mit.edu/research/clinical-decision-making-group">MEDG</a> group at MIT CSAIL, advised by <a href="https://www.csail.mit.edu/person/amar-gupta">Amar Gupta</a>, where I work on building models to detect psychiatric diseases using vocal biomarkers.</p>
+        <p>Previously, I built out <a href="https://sigil.cartesia.ai/">evals</a> at <a href="https://cartesia.ai/">Cartesia</a>, and worked on <a href="https://scale.com/experts">Expert Matching</a> at Scale. Before that, I did my undergrad at MIT, where I majored in Computer Science &amp; Econ, and did a handful of internships in software engineering and machine learning research.</p>
+        <p>I also enjoy aerial hoops, playing board games like <a href="https://boardgamegeek.com/boardgame/271324/its-a-wonderful-world"><i>It’s a Wonderful World</i></a>, reading, and watching Matt Damon movies.</p>
+      </div>
+    </div>
+    <img class="portrait" src="assets/img/jenny.jpg" width="640" height="640"
+         alt="Photo of Jenny Cai, smiling, sitting on a lawn">
+  </header>
+
+  <section aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Projects</h2>
+
+    <article class="project">
+      <a class="media-link" href="https://docs.google.com/document/d/1pTIQeWxnvVTeAfJNTYtqmfSAVnxPgDO50degZspWYrE/edit?usp=sharing" tabindex="-1" aria-hidden="true"><img class="thumb" src="assets/img/rl-dose-curve.webp" width="720" height="480"
+           alt="Plot: student hack rate above the control student rises with teacher hack rate, more steeply for RL-trained teachers"></a>
+      <div>
+        <h3>Does the origin of reward-hacking affect its transferability?</h3>
+        <p class="meta"><b>Jenny&nbsp;Cai</b></p>
+        <p class="meta venue">Independent research project, 2026</p>
+        <p class="meta"><a href="https://docs.google.com/document/d/1pTIQeWxnvVTeAfJNTYtqmfSAVnxPgDO50degZspWYrE/edit?usp=sharing">writeup</a><span class="sep" aria-hidden="true">|</span><a href="https://github.com/jennyxycai/trait-transfer-evals">code</a></p>
+        <p class="summary">Does reward hacking learned through RL spread to student models differently than reward hacking learned through SFT? I distilled four Qwen3.5-9B teachers that reward hack on coding tasks (two trained with RL, two with SFT) into students trained only on each teacher’s correct answers to GSM8K math problems. Every student picked up the hack. Measured against a control student, each student’s rise in hack rate was 2.5–5.5% of its teacher’s rise over the base model, and it was larger when the teacher hacked more.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <a class="media-link" href="https://jennyxycai.com/assets/68611_final_paper.pdf" tabindex="-1" aria-hidden="true"><img class="thumb" src="assets/img/bioner-pipeline.webp" width="720" height="480"
+           alt="Pipeline diagram: unlabeled biomedical text chunks go to GPT with an NER prompt and examples, and come back labeled"></a>
+      <div>
+        <h3>Automatic BioNER Data Annotation with Large Language Models</h3>
+        <p class="meta"><b>Jenny&nbsp;Cai</b>, Victoria&nbsp;Gao, Isabella&nbsp;Struckman, Ryan&nbsp;Welch</p>
+        <p class="meta venue">MIT 6.8611 final project, 2023</p>
+        <p class="meta"><a href="https://jennyxycai.com/assets/68611_final_paper.pdf">paper</a><span class="sep" aria-hidden="true">|</span><a href="https://github.com/jennyxycai/llm-annotations">code</a></p>
+        <p class="summary">Labeling biomedical named entity recognition (BioNER) datasets by hand is slow and expensive. We prompted GPT-3.5 (zero-, one-, and few-shot) to label five BLURB datasets, then judged the labels against expert annotations and by fine-tuning BioLinkBERT and BioGPT on them.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <a class="media-link" href="https://doi.org/10.30953/thmt.v8.421" tabindex="-1" aria-hidden="true"><img class="thumb" src="assets/img/interoperability.webp" width="720" height="480"
+           alt="Figure: healthcare data exchange at three tiers, between facilities, within a facility, and at the point of care"></a>
+      <div>
+        <h3>Pragmatic Approaches to Interoperability – Surmounting Barriers to Healthcare Data and Information Across Organizations and Political Boundaries</h3>
+        <p class="meta">Bharath&nbsp;Perugu, Varun&nbsp;Wadhwa, Jin&nbsp;Kim, <b>Jenny&nbsp;Cai</b>, Audrey&nbsp;Shin, Amar&nbsp;Gupta</p>
+        <p class="meta venue">Telehealth and Medicine Today, 2023</p>
+        <p class="meta"><a href="https://doi.org/10.30953/thmt.v8.421">paper</a></p>
+        <p class="summary">A review of healthcare interoperability efforts in the U.S. and abroad from 2010 to 2023, at three levels: between facilities, within a facility, and at the point of care. It closes with policy recommendations for exchanging health data more easily.</p>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="fun-heading">
+    <h2 id="fun-heading">fun!</h2>
+    <div class="fun-grid">
+      <article class="fun-card">
+        <a class="media-link" href="https://devpost.com/software/chair-zao3kp" tabindex="-1" aria-hidden="true"><img class="fun-media" src="assets/img/chair.webp" width="640" height="480"
+             alt="CHAIR landing page: the word CHAIR with the letters A and I in blue"></a>
+        <h3>CH<span class="ai">AI</span>R: Real-time ergonomics via posture analysis</h3>
+        <p class="meta venue">TreeHacks 2024</p>
+        <p class="summary">A smart chair equipped with pressure sensors and a webcam that uses custom CV models to monitor posture and provide real-time feedback. <a href="https://devpost.com/software/chair-zao3kp">see it!</a></p>
+      </article>
+      <article class="fun-card">
+        <video class="fun-media" id="stable-draw" autoplay muted loop playsinline preload="metadata"
+               width="640" height="480" poster="assets/img/stable-draw-poster.webp"
+               aria-label="Screen recording: a painted bowl of cherries is repainted as oranges, then bananas">
+          <source src="assets/img/stable-draw.mp4" type="video/mp4">
+        </video>
+        <h3>Stable-diffusion Generative Art</h3>
+        <p class="summary">A web app for designing images with Stable Diffusion: start from a text prompt, an uploaded image, or a sketch, then edit it with plain-English instructions and inpainting. <a href="https://stable-draw-items.vercel.app/paint">try it</a><span class="sep" aria-hidden="true"> | </span><a href="https://github.com/jennyxycai/stable_draw">code</a></p>
+      </article>
+    </div>
+  </section>
+
+  <footer>Last updated November 2026</footer>
+</main>
+
+<script>
+  (function () {
+    var a = document.getElementById("email");
+    if (a) a.href = "mailto:" + a.dataset.user + "@" + a.dataset.domain;
+
+    var v = document.getElementById("stable-draw");
+    if (v && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    }
+  })();
+</script>
+</body>
+</html>
